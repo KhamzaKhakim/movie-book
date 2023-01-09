@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:1234@movie-book.kyjbafy.mongodb.net/movie-book?retryWrites=true&w=majority&serverSelectionTimeoutMS=4000&connectTimeoutMS=4000
+      database: movie-book
