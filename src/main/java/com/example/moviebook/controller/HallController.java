@@ -16,13 +16,13 @@ public class HallController {
         this.hallRepository = hallRepository;
     }
 
-    @PostMapping("/api/hall")
+    @PostMapping("api/admin/hall")
     public void addHall(@RequestBody Hall hall){
 
         hallRepository.save(hall);
     }
 
-    @GetMapping("/api/hall")
+    @GetMapping("api/hall")
     public List<Hall> showAllHall(){
         return hallRepository.findAll();
     }
@@ -33,7 +33,7 @@ public class HallController {
     }
 
 
-    @DeleteMapping("api/hall/{id}")
+    @DeleteMapping("api/admin/hall/{id}")
     public void deleteHallById(@PathVariable String id){
         hallRepository.delete(hallRepository.findHallById(id));
     }

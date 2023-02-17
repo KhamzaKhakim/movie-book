@@ -19,13 +19,13 @@ public class MovieController {
         this.movieRepository = movieRepository;
     }
 
-    @PostMapping("/api/movie")
+    @PostMapping("api/admin/movie")
     @Transactional
     public void addMovie(@RequestBody Movie movie){
         movieRepository.save(movie);
     }
 
-    @GetMapping("/api/movie")
+    @GetMapping("api/movie")
     @Transactional
     public List<Movie> showAllMovie(){
         return movieRepository.findAll();
@@ -37,7 +37,7 @@ public class MovieController {
     }
 
 
-    @DeleteMapping("api/movie/{id}")
+    @DeleteMapping("api/admin/movie/{id}")
     public void deleteMovieById(@PathVariable String id){
         movieRepository.delete(movieRepository.findMovieById(id));
     }

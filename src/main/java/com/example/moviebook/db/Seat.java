@@ -21,7 +21,6 @@ public class Seat {
     private Integer row;
     private Boolean available;
 
-    @DBRef
-    private User user;
+    private String user;
 
 }

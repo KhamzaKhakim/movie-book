@@ -15,13 +15,13 @@ public class ScheduleController {
         this.scheduleRepository = scheduleRepository;
     }
 
-    @PostMapping("/api/schedule")
+    @PostMapping("api/admin/schedule")
     public void addSchedule(@RequestBody Schedule schedule){
         scheduleRepository.save(schedule);
     }
 
 
-    @GetMapping("/api/schedule")
+    @GetMapping("api/schedule")
     public List<Schedule> showAllSchedule(){
         return scheduleRepository.findAll();
     }
@@ -32,7 +32,7 @@ public class ScheduleController {
     }
 
 
-    @DeleteMapping("api/schedule/{id}")
+    @DeleteMapping("api/admin/schedule/{id}")
     public void deleteMovieById(@PathVariable String id){
         scheduleRepository.delete(scheduleRepository.findScheduleById(id));
     }
